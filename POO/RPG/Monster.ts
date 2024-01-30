@@ -1,29 +1,48 @@
 import { Warrior } from "./Warrior"
 export class Monster {
-    strenght: number
-    name: string
-    health: number
+    private strenght: number
+    private name: string
+    private health: number
 
     constructor(name: string) {
         this.name = name
         this.health = 10
         this.strenght = 50
     }
-    info():void{
+
+    private info():void{
         console.log(`Monster info \nname: ${this.name}; \nstrenght: ${this.strenght} \nhealth: ${this.health}`);
     }
-
-    attack(theWarrior:Warrior):void{
+    
+    private attack(theWarrior:Warrior):void{
         const damage = this.strenght
-        theWarrior.reciveDamage(damage)
-        console.log(`o perigoso ${this.name} atacou ${theWarrior.name} e causou ${damage} de dano`);
-
+        theWarrior.reciveDamageWarrior(damage)
+        console.log(`o perigoso ${this.name} atacou ${theWarrior.nameWarrior} e causou ${damage} de dano`);
     }
 
-    reciveDamage(damage:number){
+
+    private reciveDamage(damage:number){
         this.health -= damage
         console.log(`o perigoso ${this.name} recebeu ${damage} de dano, restando somente ${this.health} de saude`);
     }
 
+    public get strenghtMonster(){
+        return this.strenght
+    }
+    public get nameMonster(){
+        return this.name
+    }
+    public get healthMonster(){
+        return this.health
+    }
+    public get infoMonster(){
+        return this.info
+    }
+    public get attackMonster(){
+        return this.attack
+    }
+    public get reciveDamageMonster(){
+        return this.reciveDamage
+    }
 
 }
