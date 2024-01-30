@@ -12,51 +12,16 @@ var Monster = /** @class */ (function () {
     };
     Monster.prototype.attack = function (theWarrior) {
         var damage = this.strenght;
-        theWarrior.reciveDamageWarrior(damage);
-        console.log("o perigoso ".concat(this.name, " atacou ").concat(theWarrior.nameWarrior, " e causou ").concat(damage, " de dano"));
+        theWarrior.reciveDamage(damage);
+        console.log("o perigoso ".concat(this.name, " atacou ").concat(theWarrior.getName, " e causou ").concat(damage, " de dano"));
     };
     Monster.prototype.reciveDamage = function (damage) {
         this.health -= damage;
         console.log("o perigoso ".concat(this.name, " recebeu ").concat(damage, " de dano, restando somente ").concat(this.health, " de saude"));
     };
-    Object.defineProperty(Monster.prototype, "strenghtMonster", {
-        get: function () {
-            return this.strenght;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Monster.prototype, "nameMonster", {
+    Object.defineProperty(Monster.prototype, "getName", {
         get: function () {
             return this.name;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Monster.prototype, "healthMonster", {
-        get: function () {
-            return this.health;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Monster.prototype, "infoMonster", {
-        get: function () {
-            return this.info;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Monster.prototype, "attackMonster", {
-        get: function () {
-            return this.attack;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Monster.prototype, "reciveDamageMonster", {
-        get: function () {
-            return this.reciveDamage;
         },
         enumerable: false,
         configurable: true
