@@ -1,0 +1,16 @@
+var myName = "Gustavo";
+var myLastName = "Wazlawick";
+var myAge = 18;
+var iAmStudent = true;
+console.log("ola, meu nome \u00E9 ".concat(myName, " ").concat(myLastName, " e eu tenho ").concat(myAge, " anos \nsou estudante? ").concat(iAmStudent));
+var serie = "The Bear";
+var temporadasDeTheBear = 2;
+console.log(typeof serie);
+console.log(typeof temporadasDeTheBear);
+var numberString = "54";
+var myNumber = Number(numberString);
+console.log(typeof myNumber);
+var sum = myNumber + 5;
+console.log(sum);
+var numberToString = myNumber.toString();
+console.log(typeof numberToString);

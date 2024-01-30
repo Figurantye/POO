@@ -1,0 +1,9 @@
+1) crie uma função chamada contemFilme que recebe um array de filmes e um filme como parametro a função deve retornar 'true' se o filme estiver presente no array e 'false' caso contrario
+
+2) crie uma função chamada "adicionarJogo" que recebe um array com jogos e um novo jogo. a função deve adicionaar o novo jogo ao finla do array e deve retornar o array atualizado
+
+3) crie uma função chamada "removerJogo" que remove o ultimo jogo adicionado. retorne o array atualizado.
+
+4) crie uma função que recebe um array de numeros como parametros. a função deve retornar um novo array, apenas com os numeros pares.
+
+5) crie uma função chamada dobrarParesMenoresQueCinco que recebe um array de numeros, seleciona apenas os elementos pares e menores que cinco, dobra cada um desses numeros
