@@ -1,31 +1,28 @@
-import { Monster } from "./Monster"
-
-export class Warrior{
-    private name:string
-    private type:string
-    private strenght:number
-    private health:number
-
-    constructor(name:string, type:string, strenght:number){
-        this.name = name
-        this.type = type
-        this.strenght = strenght
-        this.health = 100
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Warrior = void 0;
+var Warrior = /** @class */ (function () {
+    function Warrior(name, type, strenght) {
+        this.name = name;
+        this.type = type;
+        this.strenght = strenght;
+        this.health = 100;
     }
-    private info():void{
-        console.log(`Warrior info \nname${this.name}; \nType: ${this.type} \nstrenght: ${this.strenght} \nhealth: ${this.health}`);}
-
-    public attack(moonster:Monster):void{
-        const damage = this.strenght
-        console.log(`o poderoso ${this.type} de nome ${this.name} atacou o maldito ${moonster.getName} e causou ${damage} de dano`);
-        moonster.reciveDamage(damage)
-    }
-
-    public reciveDamage(damage:number):void{
-        this.health -= damage
-        console.log(`o poderoso ${this.name} recebeu ${damage}, restando somente ${this.health} de saude`);
-    }
-    public getName(){
-        return this.name
-    }
-}
+    Warrior.prototype.info = function () {
+        console.log("Warrior info \nname".concat(this.name, "; \nType: ").concat(this.type, " \nstrenght: ").concat(this.strenght, " \nhealth: ").concat(this.health));
+    };
+    Warrior.prototype.attack = function (moonster) {
+        var damage = this.strenght;
+        console.log("o poderoso ".concat(this.type, " de nome ").concat(this.name, " atacou o maldito ").concat(moonster.getName, " e causou ").concat(damage, " de dano"));
+        moonster.reciveDamage(damage);
+    };
+    Warrior.prototype.reciveDamage = function (damage) {
+        this.health -= damage;
+        console.log("o poderoso ".concat(this.name, " recebeu ").concat(damage, ", restando somente ").concat(this.health, " de saude"));
+    };
+    Warrior.prototype.getName = function () {
+        return this.name;
+    };
+    return Warrior;
+}());
+exports.Warrior = Warrior;
