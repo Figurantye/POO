@@ -9,8 +9,18 @@ var Dog = /** @class */ (function () {
     Dog.prototype.eat = function (quantity) {
         console.log("the dog has eaten ".concat(quantity));
     };
+    Dog.prototype.getName = function () {
+        return this.name;
+    };
+    Dog.prototype.setWeight = function (peso) {
+        return this.weight = peso;
+    };
+    Dog.prototype.getWeight = function () {
+        return this.weight;
+    };
     return Dog;
 }());
 var myDog = new Dog("Mel", 30);
-myDog.name = "princesa";
-console.log(myDog.name);
+console.log(myDog.getName());
+myDog.setWeight(43);
+console.log(myDog.getWeight());

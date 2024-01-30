@@ -1,21 +1,11 @@
-class Dog{
-    name:string; 
-    weight:number
+import { Animal } from "./Animal";
 
+export class Dog extends Animal{
     constructor(name:string, weight:number){
-        this.name = name
-        this.weight = weight
+        super(name, weight)
     }
     
     bark():void{
         console.log("au au");
     }
-    
-    eat(quantity:number):void{
-        console.log(`the dog has eaten ${quantity}`);        
-    }
 }
-
-const myDog = new Dog(`Mel`, 30)
-myDog.name = `princesa`
-console.log(myDog.name);
