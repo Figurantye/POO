@@ -19,14 +19,20 @@ exports.Bird = void 0;
 var Animal_1 = require("./Animal");
 var Bird = /** @class */ (function (_super) {
     __extends(Bird, _super);
-    function Bird(name, weight) {
-        return _super.call(this, name, weight) || this;
+    function Bird(name, age, wingspan) {
+        var _this = _super.call(this, name, age) || this;
+        _this.wingspan = wingspan;
+        return _this;
     }
     Bird.prototype.fly = function () {
-        console.log("the ".concat(this.getName, " is flying"));
+        console.log("the ".concat(this.getName(), " is flying"));
+    };
+    Bird.prototype.getWingspan = function () {
+        return this.wingspan;
+    };
+    Bird.prototype.setWingspan = function (wingspan) {
+        this.wingspan = wingspan;
     };
     return Bird;
 }(Animal_1.Animal));
 exports.Bird = Bird;
-var bird = new Bird("Arara", 0.5);
-console.log(bird.emitSound("piupiu"));
