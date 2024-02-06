@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Bird_1 = require("./Bird");
+var Mammal_1 = require("./Mammal");
+var mam = new Mammal_1.Mammal("bear", 20, "white");
+var bird = new Bird_1.Bird("macaw", 2, 10);
+mam.info();
+bird.info();
+console.log("info updated");
+mam.infoUpdate();
+bird.infoUpdate();
