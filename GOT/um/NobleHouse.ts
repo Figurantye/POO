@@ -3,7 +3,7 @@ export class NobleHouse{
     name:string
     motto:string
     heirs: HouseHeir[]
-
+ 
     constructor(name:string, motto:string){
         this.name = name
         this.motto = motto

@@ -24,25 +24,33 @@ tyrell.addHeir(heir3)
 targaryen.addHeir(heir4)
 lannister.addHeir(heir5)
 
-const soldiersStark = 2000
-const soldiersLanninster = 1800
-const soldiersBaratheon = 2500
-const soldiersTyrell = 1300
-const soldiersTargaryen = 1800
+const soldiersStark:number = 2000
+const soldiersLanninster:number = 1800
+const soldiersBaratheon:number = 2500
+const soldiersTyrell:number = 1300
+const soldiersTargaryen:number = 1800
 
-function BattleOfTheHouses(house1: NobleHouse, soldiers1: number, house2: NobleHouse, soldiers2: number): string {
-  console.log(`Batalha entre ${house1.name} e ${house2.name}`);
-  console.log(house1.HouseInfo());
-  console.log(' ');
-  console.log(house2.HouseInfo());
-  
-  if (soldiers1 > soldiers2) {
-    return `o vencedor é ${house1.name}`;
-  } else if (soldiers2 > soldiers1) {
-    return `o vencedor é ${house2.name}`;
-  } else {
-    return 'Empate';
-  }
-}
+const got:number[] = []
 
-console.log(BattleOfTheHouses(stark, soldiersStark, lannister, soldiersLanninster));
+got.push(soldiersBaratheon, soldiersLanninster, soldiersStark, soldiersTargaryen, soldiersTyrell)
+
+if(Math.max(...got) == soldiersBaratheon){
+    console.log(`o vencedor é: ${baratheon.name}`);
+}   else if(Math.max(...got) == soldiersLanninster){
+        console.log(`o vencedor é: ${lannister.name}`);
+    }
+    else if(Math.max(...got) == soldiersStark){
+        console.log(`o vencedor é: ${stark.name}`);
+    }
+    else if(Math.max(...got) == soldiersTargaryen){
+        console.log(`o vencedor é: ${targaryen.name}`);
+    }
+    else if(Math.max(...got) == soldiersTyrell){
+        console.log(`o vencedor é: ${tyrell.name}`);
+    }
+    else {
+        console.log("empate entre duas casas");
+    }
+
+    baratheon.HouseInfo();
+    

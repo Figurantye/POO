@@ -26,19 +26,24 @@ var soldiersLanninster = 1800;
 var soldiersBaratheon = 2500;
 var soldiersTyrell = 1300;
 var soldiersTargaryen = 1800;
-function BattleOfTheHouses(house1, soldiers1, house2, soldiers2) {
-    console.log("Batalha entre ".concat(house1.name, " e ").concat(house2.name));
-    console.log(house1.HouseInfo());
-    console.log(' ');
-    console.log(house2.HouseInfo());
-    if (soldiers1 > soldiers2) {
-        return "o vencedor \u00E9 ".concat(house1.name);
-    }
-    else if (soldiers2 > soldiers1) {
-        return "o vencedor \u00E9 ".concat(house2.name);
-    }
-    else {
-        return 'Empate';
-    }
+var got = [];
+got.push(soldiersBaratheon, soldiersLanninster, soldiersStark, soldiersTargaryen, soldiersTyrell);
+if (Math.max.apply(Math, got) == soldiersBaratheon) {
+    console.log("o vencedor \u00E9: ".concat(baratheon.name));
 }
-console.log(BattleOfTheHouses(stark, soldiersStark, lannister, soldiersLanninster));
+else if (Math.max.apply(Math, got) == soldiersLanninster) {
+    console.log("o vencedor \u00E9: ".concat(lannister.name));
+}
+else if (Math.max.apply(Math, got) == soldiersStark) {
+    console.log("o vencedor \u00E9: ".concat(stark.name));
+}
+else if (Math.max.apply(Math, got) == soldiersTargaryen) {
+    console.log("o vencedor \u00E9: ".concat(targaryen.name));
+}
+else if (Math.max.apply(Math, got) == soldiersTyrell) {
+    console.log("o vencedor \u00E9: ".concat(tyrell.name));
+}
+else {
+    console.log("empate entre duas casas");
+}
+baratheon.HouseInfo();
