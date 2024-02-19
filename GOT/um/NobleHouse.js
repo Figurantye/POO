@@ -11,8 +11,8 @@ var NobleHouse = /** @class */ (function () {
         this.heirs.push(heir);
     };
     NobleHouse.prototype.HouseInfo = function () {
-        console.log("House: ".concat(this.name));
-        console.log("Motto: ".concat(this.motto));
+        console.log("casa: ".concat(this.name));
+        console.log("lema: ".concat(this.motto));
         this.heirs.forEach(function (heir) {
             console.log("herdeiro: ".concat(heir.heir, ", idade: ").concat(heir.age, ", posi\u00E7\u00E3o: ").concat(heir.rank));
         });

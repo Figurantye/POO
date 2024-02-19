@@ -1,5 +1,4 @@
 import { HouseHeir } from "./HouseHeir"
-
 export class NobleHouse{
     name:string
     motto:string
@@ -16,8 +15,8 @@ export class NobleHouse{
     }
 
     HouseInfo():void{
-    console.log(`House: ${this.name}`);
-    console.log(`Motto: ${this.motto}`); 
+    console.log(`casa: ${this.name}`);
+    console.log(`lema: ${this.motto}`); 
     this.heirs.forEach((heir) => {
       console.log(`herdeiro: ${heir.heir}, idade: ${heir.age}, posição: ${heir.rank}`);
     });

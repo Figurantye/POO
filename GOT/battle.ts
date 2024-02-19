@@ -26,6 +26,9 @@ lannister.addHeir(heir5)
 
 const soldiersStark = 2000
 const soldiersLanninster = 1800
+const soldiersBaratheon = 2500
+const soldiersTyrell = 1300
+const soldiersTargaryen = 1800
 
 function BattleOfTheHouses(house1: NobleHouse, soldiers1: number, house2: NobleHouse, soldiers2: number): string {
   console.log(`Batalha entre ${house1.name} e ${house2.name}`);

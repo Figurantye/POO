@@ -23,6 +23,9 @@ targaryen.addHeir(heir4);
 lannister.addHeir(heir5);
 var soldiersStark = 2000;
 var soldiersLanninster = 1800;
+var soldiersBaratheon = 2500;
+var soldiersTyrell = 1300;
+var soldiersTargaryen = 1800;
 function BattleOfTheHouses(house1, soldiers1, house2, soldiers2) {
     console.log("Batalha entre ".concat(house1.name, " e ").concat(house2.name));
     console.log(house1.HouseInfo());
