@@ -1,7 +1,7 @@
 import { NobleHouse } from "../um/NobleHouse";
 import { HouseRules } from "./HouseRules";
 
-export class Stark extends NobleHouse implements HouseRules{
+export class Lannister extends NobleHouse implements HouseRules{
     religiao:string
     localizacao:string
 
@@ -11,9 +11,8 @@ export class Stark extends NobleHouse implements HouseRules{
         this.localizacao = localizacao
     }
     guerrear():void{
-        console.log(`a casa ${this.name} esta guerreando`);   
+        console.log(`a casa ${this.name} esta guerreando`);
     }
-
     explorar():void{
         console.log(`a casa ${this.name} está explorando as fraquezas dos adversarios`);    
     }
@@ -23,14 +22,16 @@ export class Stark extends NobleHouse implements HouseRules{
     }
 
     mottoo():void{
-        console.log(`o motto da casa ${this.name} é ${this.motto}`);
+        console.log(`o lema da casa ${this.name} é ${this.motto}`);
     }
-     lugar():void{
+    
+    lugar():void{
         console.log(`a casa ${this.name} esta localizada em ${this.localizacao}`);  
      }
 
-    //exclusivo
-    lobo(){
-        console.log(`a casa ${this.name} tem conexão com lobos`);   
-    }
+     //exclusivo
+     riqueza(){
+        console.log(`a imagem da casa ${this.name} esta associada a uma vida luxuosa`);
+     }
+
 }

@@ -1,8 +1,9 @@
 export interface HouseRules{
-    exercito:string
     religiao:string
+    localizacao:string
 
-    guerra():void
-    hereditariedade():void
-    politica():void
+    guerrear():void 
+    explorar():void
+    cultuar():void
+    mottoo():void
 }

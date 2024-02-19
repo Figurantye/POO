@@ -1,5 +1,5 @@
 export interface HouseHeir{
-    nomeHerdeiro:string
-    idadeHerdeiro:number
-    posicao:number
+    heir:string
+    age:number
+    rank:number
 }

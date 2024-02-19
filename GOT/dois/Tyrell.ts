@@ -1,7 +1,7 @@
 import { NobleHouse } from "../um/NobleHouse";
 import { HouseRules } from "./HouseRules";
 
-export class Stark extends NobleHouse implements HouseRules{
+export class Tyrell extends NobleHouse implements HouseRules{
     religiao:string
     localizacao:string
 
@@ -11,9 +11,9 @@ export class Stark extends NobleHouse implements HouseRules{
         this.localizacao = localizacao
     }
     guerrear():void{
-        console.log(`a casa ${this.name} esta guerreando`);   
+        console.log(`a casa ${this.name} esta guerreando`);
+        
     }
-
     explorar():void{
         console.log(`a casa ${this.name} está explorando as fraquezas dos adversarios`);    
     }
@@ -30,7 +30,7 @@ export class Stark extends NobleHouse implements HouseRules{
      }
 
     //exclusivo
-    lobo(){
-        console.log(`a casa ${this.name} tem conexão com lobos`);   
+    natureza(){
+        console.log(`a casa ${this.name} tem conexão a natureza`);   
     }
 }
